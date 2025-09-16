@@ -50,6 +50,6 @@ public class EstimatorLeaveApprove {
 	        driver.findElement(Submit).click();
 	        Thread.sleep(2000);
 	        
-	}        
+	}       
 		
 	}

@@ -24,5 +24,4 @@ public class TestEstimatorLeave extends Basetest {
 
 	        System.out.println("✅ Leave has ben added ");
 	    }
-
 }
