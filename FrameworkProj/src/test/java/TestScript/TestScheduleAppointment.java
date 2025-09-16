@@ -10,8 +10,8 @@ public class TestScheduleAppointment extends Basetest {
     public void testScheduleAppointment() throws InterruptedException {
 
         ScheduleAppointment scheduleAppointment = new ScheduleAppointment(driver);
-        scheduleAppointment.scheduleAppoint("Zone 4", "1", "Grammy", "new");
+        scheduleAppointment.scheduleAppoint("Zone 4", "2", "Grammy", "new");
 
-        System.out.println("✅ Schedule Appointment test executed successfully");
+        System.out.println("✅ Schedule Appointment test executed successfully vvvvvv");
     }
 }
