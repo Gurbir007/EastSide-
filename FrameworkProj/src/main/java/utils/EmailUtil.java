@@ -1,9 +1,6 @@
 package utils;
 
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 import jakarta.mail.*;
