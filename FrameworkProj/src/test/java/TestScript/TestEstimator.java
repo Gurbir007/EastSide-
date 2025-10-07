@@ -1,13 +1,15 @@
 package TestScript;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import listeners.TestListener;  
 		 
 
 import Base.Basetest;
 import pages.EstimatorPage;
 
-
+@Listeners(TestListener.class)
 public class TestEstimator extends Basetest {
 
     @Test
@@ -17,7 +19,7 @@ public class TestEstimator extends Basetest {
         EstimatorPage estimatorPage = new EstimatorPage(driver);
         estimatorPage.goToAddEstimator();
         
-        estimatorPage.addEstimator("Milan E", "Milan.doe@example.com", "9876543230", "111111111111Ab$","111111111111Ab$");
+        estimatorPage.addEstimator("jony", "jony.doe@example.com", "9876543238", "111111111111Ab$","111111111111Ab$");
 
         System.out.println("✅ Estimator added successfully");
     }

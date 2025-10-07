@@ -1,58 +1,58 @@
 package listeners;
 
 import java.lang.reflect.Method;
+import java.io.File;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.*;
 
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import reports.ExtentManager;
 import reports.ExtentTestManager;
 import utils.EmailUtil;
 import utils.LoggerUtil;
 import utils.ScreenshotUtil;
-
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.testng.*;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import java.io.File;
 
 public class TestListener implements ITestListener, ISuiteListener {
 
     private static final Logger log = LoggerUtil.getLogger(TestListener.class);
     private static final ExtentReports extent = ExtentManager.getExtentReports();
 
+    // ---------------- Suite level ----------------
     @Override
     public void onStart(ISuite suite) {
         log.info("Suite started: " + suite.getName());
 
         // Ensure reports folder exists
         File reportFolder = new File(System.getProperty("user.dir") + "/reports");
-        if (!reportFolder.exists()) {
-            reportFolder.mkdirs();
-        }
+        if (!reportFolder.exists()) reportFolder.mkdirs();
 
         // Ensure screenshots folder exists
         File screenshotFolder = new File(System.getProperty("user.dir") + "/screenshots");
-        if (!screenshotFolder.exists()) {
-            screenshotFolder.mkdirs();
-        }
+        if (!screenshotFolder.exists()) screenshotFolder.mkdirs();
     }
 
     @Override
     public void onFinish(ISuite suite) {
-        log.info("Suite finished: " + suite.getName());
+        // Flush ExtentReports
         extent.flush();
+        log.info("Suite finished: " + suite.getName());
 
         // Send email after suite finishes
         try {
-            String reportPath = System.getProperty("user.dir") + "/reports/AutomationReport.html";
+            String reportPath = utils.ConfigReader.get("report.path"); // use config path
             EmailUtil.sendReport(reportPath);
         } catch (Exception e) {
-            log.error("Error sending report via email: " + e.getMessage());
+            log.error("❌ Error sending report via email: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
+    // ---------------- Test level ----------------
     @Override
     public void onTestStart(ITestResult result) {
         String testName = getTestName(result);
@@ -77,7 +77,7 @@ public class TestListener implements ITestListener, ISuiteListener {
         log.error("Test failed: " + testName, result.getThrowable());
 
         try {
-            // Grab driver from test instance if it has getDriver()
+            // Grab driver from test instance if getDriver() exists
             Object currentClass = result.getInstance();
             Method m = currentClass.getClass().getMethod("getDriver");
             WebDriver driver = (WebDriver) m.invoke(currentClass);
@@ -87,7 +87,7 @@ public class TestListener implements ITestListener, ISuiteListener {
                 test.addScreenCaptureFromPath(screenshotPath);
             }
         } catch (NoSuchMethodException nsme) {
-            log.warn("Test class does not expose getDriver() method. Screenshot not attached.");
+            log.warn("Test class does not expose getDriver() method. Screenshot skipped.");
         } catch (Exception e) {
             log.error("Error taking screenshot: " + e.getMessage());
         }
@@ -103,11 +103,12 @@ public class TestListener implements ITestListener, ISuiteListener {
         ExtentTestManager.removeTest(testName);
     }
 
-    // unused but required
+    // ---------------- Unused required overrides ----------------
     @Override public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
     @Override public void onStart(ITestContext context) {}
     @Override public void onFinish(ITestContext context) {}
 
+    // ---------------- Helper ----------------
     private String getTestName(ITestResult result) {
         return result.getMethod().getMethodName() != null ? result.getMethod().getMethodName() : result.getName();
     }
