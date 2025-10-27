@@ -1,13 +1,13 @@
 package TestScript;
 
 import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
-import listeners.TestListener;  
-		 
-
-import Base.Basetest;
+import listeners.TestListener;
 import pages.EstimatorPage;
+import Base.Basetest;
+
 
 @Listeners(TestListener.class)
 public class TestEstimator extends Basetest {

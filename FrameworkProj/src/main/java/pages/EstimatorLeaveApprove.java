@@ -6,9 +6,6 @@ import org.openqa.selenium.WebDriver;
 public class EstimatorLeaveApprove {
 	WebDriver driver;
 
-    By emailField = By.id("email-login");
-    By passwordField = By.name("password");
-    By loginButton = By.xpath("//button[contains(text(),'Login')]");
     By estimatorMenu = By.xpath("//div[@role='button']"); 
     By LeaveRequest = By.xpath("//h6[text() = 'Leave Requests']");
     By EditLeave =    By.xpath("//table/tbody/tr[5]//button[@aria-label='Edit']");
@@ -19,15 +16,6 @@ public class EstimatorLeaveApprove {
         this.driver = driver;
     }
 
-    public void login(String email, String password) throws InterruptedException {
-        driver.findElement(emailField).sendKeys(email);
-        Thread.sleep(1000);
-        driver.findElement(passwordField).sendKeys(password);
-        Thread.sleep(1000);
-        driver.findElement(loginButton).click();
-        Thread.sleep(1000);
-        
-    }
     
 
 	public void UpdateLeaveRequest() throws InterruptedException {

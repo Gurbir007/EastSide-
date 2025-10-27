@@ -12,6 +12,6 @@ public class TestScheduleAppointment extends Basetest {
         ScheduleAppointment scheduleAppointment = new ScheduleAppointment(driver);
         scheduleAppointment.scheduleAppoint("Zone 4", "2", "Grammy", "new");
 
-        System.out.println("✅ Schedule Appointment test executed successfully vvvvvv");
+        System.out.println("✅ Schedule Appointment test executed successfully ");
     }
 }

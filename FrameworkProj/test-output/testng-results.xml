@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-07T15:20:43 IST" name="Default suite" finished-at="2025-10-07T15:21:16 IST" duration-ms="33545">
+  <suite started-at="2025-10-27T12:33:32 IST" name="Default suite" finished-at="2025-10-27T12:33:37 IST" duration-ms="5017">
     <groups>
     </groups>
-    <test started-at="2025-10-07T15:20:43 IST" name="Default test" finished-at="2025-10-07T15:21:16 IST" duration-ms="33545">
-      <class name="TestScript.TestEstimator">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestScript.TestEstimator@49438269]" started-at="2025-10-07T15:20:25 IST" name="setUp" finished-at="2025-10-07T15:20:43 IST" duration-ms="17688" status="PASS">
+    <test started-at="2025-10-27T12:33:32 IST" name="Default test" finished-at="2025-10-27T12:33:37 IST" duration-ms="5017">
+      <class name="TestScript.TestGenerateReport">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestScript.TestGenerateReport@3d285d7e]" started-at="2025-10-27T12:33:18 IST" name="setUp" finished-at="2025-10-27T12:33:32 IST" duration-ms="13780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAddEstimator()[pri:0, instance:TestScript.TestEstimator@49438269]" started-at="2025-10-07T15:20:43 IST" name="testAddEstimator" finished-at="2025-10-07T15:21:16 IST" duration-ms="33345" status="PASS">
+        <test-method signature="Report()[pri:0, instance:TestScript.TestGenerateReport@3d285d7e]" started-at="2025-10-27T12:33:32 IST" name="Report" finished-at="2025-10-27T12:33:37 IST" duration-ms="4715" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddEstimator -->
-        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:TestScript.TestEstimator@49438269]" started-at="2025-10-07T15:21:16 IST" name="afterTest" finished-at="2025-10-07T15:21:16 IST" duration-ms="155" status="PASS">
+        </test-method> <!-- Report -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:TestScript.TestGenerateReport@3d285d7e]" started-at="2025-10-27T12:33:37 IST" name="afterTest" finished-at="2025-10-27T12:33:37 IST" duration-ms="244" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddEstimator status=SUCCESS method=TestEstimator.testAddEstimator()[pri:0, instance:TestScript.TestEstimator@49438269] output={null}]]]>
+                <![CDATA[[TestResult name=Report status=SUCCESS method=TestGenerateReport.Report()[pri:0, instance:TestScript.TestGenerateReport@3d285d7e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScript.TestEstimator@49438269]" started-at="2025-10-07T15:21:16 IST" name="tearDown" finished-at="2025-10-07T15:21:17 IST" duration-ms="1200" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScript.TestGenerateReport@3d285d7e]" started-at="2025-10-27T12:33:37 IST" name="tearDown" finished-at="2025-10-27T12:33:38 IST" duration-ms="847" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- TestScript.TestEstimator -->
+      </class> <!-- TestScript.TestGenerateReport -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

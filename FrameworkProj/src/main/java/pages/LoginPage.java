@@ -3,13 +3,14 @@ package pages;
 
 import org.openqa.selenium.By;
 
+
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
     WebDriver driver;
 
     By emailField = By.id("email-login");
-    By passwordField = By.name("password");
+    By passwordField = By.id("-password-login");
     By loginButton = By.xpath("//button[contains(text(),'Login')]");
 
     public LoginPage(WebDriver driver) {

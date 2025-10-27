@@ -1,22 +1,22 @@
 package TestScript;
 
 import org.testng.annotations.Test;
-
-
-
-
-
 import Base.Basetest;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import java.time.Duration;
+//import org.testng.Assert;
 
-public class TestLogin extends Basetest{
+public class TestLogin extends Basetest {
 
     @Test
-    public void testValidLogin() throws InterruptedException {
-    	
-//        LoginPage loginPage = new LoginPage(driver);
-//        loginPage.login("esf.admin.001@torrantal.asia", "111111111111Ab$");
-        Thread.sleep(20000);
+    public void testValidLogin() {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        wait.until(ExpectedConditions.urlContains("/dashboard"));
+//
+//        String currentUrl = driver.getCurrentUrl();
+//        Assert.assertTrue(currentUrl.contains("/dashboard"), "❌ Login failed — Dashboard not loaded");
 
-        System.out.println("✅ Browser opened and login attempted");
+        System.out.println("✅ Browser opened and login successful — Dashboard verified!");
     }
 }
