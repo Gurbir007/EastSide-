@@ -5,3 +5,70 @@
 2025-09-24 13:56:55 INFO  Basetest:32 - ✅ Logged in successfully before test suite
 2025-09-24 13:59:03 INFO  Basetest:32 - ✅ Logged in successfully before test suite
 2025-09-24 14:00:56 INFO  Basetest:32 - ✅ Logged in successfully before test suite
+2025-10-07 14:46:31 INFO  TestListener:28 - Suite started: Default suite
+2025-10-07 14:46:50 INFO  TestListener:62 - Test started: testAddEstimator
+2025-10-07 14:47:23 INFO  TestListener:69 - Test passed: testAddEstimator
+2025-10-07 14:47:25 INFO  TestListener:45 - Suite finished: Default suite
+2025-10-07 15:13:19 INFO  TestListener:28 - Suite started: Default suite
+2025-10-07 15:13:37 INFO  TestListener:61 - Test started: testAddEstimator
+2025-10-07 15:14:10 INFO  TestListener:68 - Test passed: testAddEstimator
+2025-10-07 15:14:11 INFO  TestListener:43 - Suite finished: Default suite
+2025-10-07 15:20:25 INFO  TestListener:28 - Suite started: Default suite
+2025-10-07 15:20:43 INFO  TestListener:61 - Test started: testAddEstimator
+2025-10-07 15:21:16 INFO  TestListener:68 - Test passed: testAddEstimator
+2025-10-07 15:21:18 INFO  TestListener:43 - Suite finished: Default suite
+2025-10-24 10:19:56 INFO  TestListener:28 - Suite started: Default suite
+2025-10-24 10:20:16 INFO  TestListener:61 - Test started: testAddEstimator
+2025-10-24 10:20:16 INFO  TestListener:68 - Test passed: testAddEstimator
+2025-10-24 10:20:17 INFO  TestListener:43 - Suite finished: Default suite
+2025-10-24 10:21:50 INFO  TestListener:28 - Suite started: Default suite
+2025-10-24 10:22:10 INFO  TestListener:61 - Test started: testAddEstimator
+2025-10-24 10:22:10 INFO  TestListener:68 - Test passed: testAddEstimator
+2025-10-24 10:22:11 INFO  TestListener:43 - Suite finished: Default suite
+2025-10-24 10:27:02 INFO  TestListener:28 - Suite started: Default suite
+2025-10-24 10:27:22 INFO  TestListener:61 - Test started: testAddEstimator
+2025-10-24 10:27:54 INFO  TestListener:68 - Test passed: testAddEstimator
+2025-10-24 10:27:56 INFO  TestListener:43 - Suite finished: Default suite
+2025-10-28 10:40:48 INFO  TestListener:28 - Suite started: AutomationSuite
+2025-10-28 10:41:08 INFO  TestListener:61 - Test started: testValidLogin
+2025-10-28 10:41:08 INFO  TestListener:68 - Test passed: testValidLogin
+2025-10-28 10:41:08 INFO  TestListener:61 - Test started: ClientAdd
+2025-10-28 10:41:08 ERROR TestListener:77 - Test failed: ClientAdd
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194) ~[selenium-support-4.24.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190) ~[selenium-support-4.24.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627) ~[selenium-support-4.24.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624) ~[selenium-support-4.24.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.24.0.jar:?]
+	at pages.Client.openClientForm(Client.java:41) ~[classes/:?]
+	at TestScript.TestClient.ClientAdd(TestClient.java:18) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2025-10-28 10:41:08 WARN  TestListener:90 - Test class does not expose getDriver() method. Screenshot skipped.
+2025-10-28 10:41:09 INFO  TestListener:43 - Suite finished: AutomationSuite

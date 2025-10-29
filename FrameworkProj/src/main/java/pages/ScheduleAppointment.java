@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -13,7 +14,7 @@ public class ScheduleAppointment {
     WebDriver driver;
     WebDriverWait wait;
 
-    // Locators
+   
     By schedule = By.xpath("//h6[normalize-space()='Schedules']");
     By findEstimator = By.xpath("//button[contains(text(),'Find Estimators')]");
     By selectZone = By.xpath("//div[@role='combobox']");
@@ -41,8 +42,7 @@ public class ScheduleAppointment {
     	driver.findElement(selectZone).click();
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     	List<WebElement> options = wait.until(
-    	        ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@role='listbox']//li"))
-    	);
+    	        ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@role='listbox']//li")));
 
     	options.get(2).click();
     	Thread.sleep(1000);

@@ -9,6 +9,7 @@
     <test name="LoginTests">
         <classes>
             <class name="TestScript.TestLogin"/>
+            
         </classes>
     </test>
 
